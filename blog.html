@@ -33,8 +33,22 @@
                 <div class="col">
                   <div class="card">
                     <div class="card-body text-black">
-                      <h5 class="card-title">Differences between local storage and session storage</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <h4 class="card-title">Differences between local storage and session storage</h4>
+                      <p class="card-text">
+                        <h5>Local Storage:</h5>
+                        <ul>
+                            <li>The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.</li>
+                            <li>localStorage data has no expiration time.</li>
+                            <li>localStorage data for a document loaded in a "private browsing" or "incognito" session is cleared when the last "private" tab is closed.</li>
+                        </ul>
+                        <h5>Session Storage:</h5>
+                        <ul>
+                            <li>Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab. That page session is valid only for that particular tab.</li>
+                            <li>A page session lasts as long as the tab or the browser is open, and survives over page reloads and restores.</li>
+                            <li>Duplicating a tab copies the tab's sessionStorage into the new tab.</li>
+                            <li>Closing a tab/window ends the session and clears objects in sessionStorage.</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -42,7 +56,12 @@
                   <div class="card">
                     <div class="card-body text-black">
                       <h5 class="card-title">Differences between global scope and block scope</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text">
+                        <h5>Global Scope:</h5>
+                        <p>The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.</p>
+                        <h5>Block Scope:</h5>
+                        <p>Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.</p>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -50,7 +69,27 @@
                   <div class="card">
                     <div class="card-body text-black">
                       <h5 class="card-title">Javascript event loop</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                      <p class="card-text">JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.
+                        <ul>
+                            <li>"Run-to-completion":
+                                <p>Each message is processed completely before any other message is processed.</p>
+                            </li>
+                            <li>Adding messages:
+                                <p>In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message</p>
+                            </li>
+                            <li>Zero delays:
+                                <p>
+                                    Zero delay doesn't mean the call back will fire-off after zero milliseconds. Calling setTimeout with a delay of 0 (zero) milliseconds doesn't execute the callback function after the given interval.
+                                </p>
+                            </li>
+                            <li>Several runtimes communicating together:
+                                <p>A web worker or a cross-origin iframe has its own stack, heap, and message queue. Two distinct runtimes can only communicate through sending messages via the postMessage method.</p>
+                            </li>
+                            <li>Never blocking:
+                                <p>A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks.</p>
+                            </li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </div>
