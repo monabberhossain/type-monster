@@ -27,7 +27,7 @@ function displayHistory() {
 
   previousTests.forEach((test) => {
     const newRow = document.createElement("div");
-    newRow.classList.add("card");
+    newRow.classList.add("card col-lg-4");
 
     newRow.innerHTML = `
   <h3>${test.questionText}</h3>
