@@ -11,6 +11,14 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
+.nav-item a {
+  color:#9dffad;
+}
+
+.nav-item a:hover {
+  color: #ffffff;
+}
+
 .box-container {
   width: 70%;
   margin: 0 auto;
@@ -146,7 +154,7 @@ button {
   flex-direction: row;
 }
 
-.card {
+.card-custom {
   align-items: center;
   padding: 20px 30px;
   color: white;
