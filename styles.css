@@ -143,6 +143,7 @@ button {
 
 #histories {
   display: flex;
+  flex-direction: row;
 }
 
 .card {
